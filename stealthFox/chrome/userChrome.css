@@ -1,0 +1,71 @@
+#main-window[tabsintitlebar="true"]:not([extradragspace="true"]) #TabsToolbar > .toolbar-items {
+  opacity: 0;
+  pointer-events: none;
+}
+#main-window:not([tabsintitlebar="true"]) #TabsToolbar {
+    visibility: collapse !important;
+}
+
+#main-window[tabsintitlebar="true"]:not([extradragspace="true"]) #TabsToolbar .titlebar-spacer {
+        border-inline-end: none;
+}
+
+/* Adding empty space for buttons */
+#nav-bar {
+	margin-right:140px;
+}
+
+/* 15px for dragging whole window by mouse*/
+#titlebar {
+	appearance: none !important;
+	height: 0px;
+}
+
+/* Fix for main menu calling by Alt button */
+#titlebar > #toolbar-menubar {
+	margin-top: 7px;
+}
+
+/* Move minimize/restore/close buttons to empty space */
+#TabsToolbar > .titlebar-buttonbox-container {
+	display: block;
+	position: absolute;
+	top: 10px;
+	right: 1px;
+}
+
+
+
+/* Hide splitter, when using Tree Style Tab. */
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] + #sidebar-splitter {
+  display: none !important;
+}
+/* Hide sidebar header, when using Tree Style Tab. */
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
+  visibility: collapse;
+}
+
+/* Shrink sidebar until hovered, when using Tree Style Tab. */
+#sidebar-box:not([sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]) {
+  min-width: var(--wide-tab-width) !important;
+  max-width: none !important;
+}
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] {
+  overflow: hidden !important;
+  position: relative !important;
+  transition: all 200ms !important;
+  min-width: var(--thin-tab-width) !important;
+  max-width: var(--thin-tab-width) !important;
+  z-index: 1;
+}
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:hover,
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar {
+  transition: all 200ms !important;
+  min-width: var(--wide-tab-width) !important;
+  max-width: var(--wide-tab-width) !important;
+  margin-right: calc((var(--wide-tab-width) - var(--thin-tab-width)) * -1) !important;
+  z-index: 1;
+}
+
+:root { --thin-tab-width: 35px; }
+:root { --wide-tab-width: 300px; }
