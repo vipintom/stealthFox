@@ -1,3 +1,5 @@
+/* Hiding Tabs Toolbar */
+
 #main-window[tabsintitlebar="true"]:not([extradragspace="true"]) #TabsToolbar > .toolbar-items {
   opacity: 0;
   pointer-events: none;
@@ -5,14 +7,18 @@
 #main-window:not([tabsintitlebar="true"]) #TabsToolbar {
     visibility: collapse !important;
 }
-
 #main-window[tabsintitlebar="true"]:not([extradragspace="true"]) #TabsToolbar .titlebar-spacer {
         border-inline-end: none;
 }
 
+/* Hiding Tabs Toolbar Finished */
+
+/* Moving Windows Control */
+
 /* Adding empty space for buttons */
 #nav-bar {
 	margin-right:140px;
+	margin-left:-3px;
 }
 
 /* 15px for dragging whole window by mouse*/
@@ -34,7 +40,9 @@
 	right: 1px;
 }
 
+/* Moving Windows Control Finish */
 
+/* Auto Hide Tree Style Tab  */
 
 /* Hide splitter, when using Tree Style Tab. */
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] + #sidebar-splitter {
@@ -69,3 +77,60 @@
 
 :root { --thin-tab-width: 35px; }
 :root { --wide-tab-width: 300px; }
+
+/**** PageActionsHiderSlider 2021-07-13 for Fx90 ****/
+
+    #page-action-buttons:hover #userContext-indicator 
+{ margin-right : 0px!important; }
+
+    /* Hide Buttons and Reveal on Hover */
+    #page-action-buttons:not(:hover) > .urlbar-page-action:not(#pageAction-urlbar-canvasblocker_kkapsner_de),
+    #page-action-buttons:not(:hover) #star-button {
+      width: 0px !important;
+      min-width: 0px !important;
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+      transition: all 250ms ease-in-out;
+    }
+
+    #page-action-buttons:hover > .urlbar-page-action:not(#pageAction-urlbar-canvasblocker_kkapsner_de),
+    #page-action-buttons:hover #star-button {
+      width: calc(var(--urlbar-min-height) - 2px /* border */ - 2 * var(--urlbar-container-padding)) !important;
+      min-width: unset !important;
+      transition: all 250ms ease-in-out;
+    }
+
+    /* Create page actions hover "button" */
+    #page-action-buttons::after 
+    {
+      content: "•••";
+      position: absolute;
+      top: 0.7em;
+      font-size: 0.7em;
+      opacity: 0.2;
+      right: 8px;
+transition: all 200ms ease-in-out;
+    }
+
+    /* Hide the button on hover */
+    #page-action-buttons:hover::after {
+            display: none !important;
+      width: 0px !important;
+      margin-left: 0px !important;
+transition: all 100ms ease-in-out;
+    }
+    #page-action-buttons:hover::after {
+      display: none !important;
+transition: all 100ms ease-in-out;
+    }
+
+#userContext-indicator { margin-right : 18px!important; }
+
+#urlbar,
+#searchbar {
+    font-size: 13px !important;
+    border: 0 !important;
+    padding: 1px !important;
+}
+
+* { scrollbar-width: thin !important; }
