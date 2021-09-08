@@ -17,7 +17,7 @@
 
 /* Adding empty space for buttons */
 #nav-bar {
-	margin-right:140px;
+	margin-right:137px;
 	margin-left:-3px;
 }
 
@@ -38,6 +38,13 @@
 	position: absolute;
 	top: 10px;
 	right: 1px;
+}
+
+.titlebar-button {
+  background-color: #2B2A33;
+  margin-top : -3px !important;
+  padding-top : 12px !important;
+  padding-bottom : 12px !important;
 }
 
 /* Moving Windows Control Finish */
@@ -96,7 +103,7 @@
 }
 #page-action-buttons:not(:hover) #userContext-indicator 
 { 
-  margin-right : 35px !important;
+  margin-right : 37px !important;
   transition: all 250ms ease-in-out;
 }
 
@@ -117,10 +124,11 @@
   position: absolute;
   top: 0.7em;
   font-size: 0.7em;
-  opacity: 0.2;
+  opacity: 0.5;
   right: 8px;
   transition: all 50ms ease-in-out;
 }
+
 
 /* Hide the button on hover */
 #page-action-buttons:hover::after 
@@ -136,9 +144,72 @@
 #urlbar,#searchbar 
 {
     font-size: 13px !important;
-    border: 0 !important;
-    padding: 1px !important;
+	margin-top: 1px !important;
 }
 
 * { scrollbar-width: thin !important; }
 
+findbar{
+  -moz-box-ordinal-group: 0;
+  margin-bottom: -33px;
+  position: relative;
+  border-top: none !important;
+  padding: 0 !important;
+  transition: transform 82ms linear, opacity 82ms linear 32ms !important;
+  background: none !important;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.findbar-container > .findbar-find-fast{
+  padding: var(--toolbarbutton-inner-padding) 1px;
+  margin: 0 !important;
+}
+
+findbar[hidden]{ transform: translateY(-30px);}
+
+findbar > .findbar-container,
+findbar > .close-icon{
+  border: 1px solid var(--chrome-content-separator-color);
+  border-width: 0 0 1px 0px;
+  background: var(--uc-light-bkgnd-color,var(--toolbar-bgcolor)) !important;
+  pointer-events: auto;
+}
+findbar > .findbar-container{
+  -moz-box-direction: reverse;
+  border-left-width: 1px;
+  border-bottom-left-radius: 4px;
+}
+
+.findbar-closebutton{ margin: 0 !important; border-radius: 0 !important; padding: 5px !important; }
+.findbar-closebutton > image{ padding: 3px }
+.findbar-closebutton:hover > image{ background: var(--toolbarbutton-hover-background) !important; border-radius: 4px }
+findbar > .findbar-container > hbox{ margin: 0 5px }
+
+findbar::before{
+  content:"";
+  display: -moz-box;
+  -moz-box-flex: 100;
+}
+
+#urlbar-background, #searchbar {
+    border: none !important;
+    background-color: #28272F !important;
+    animation-name: none !important;
+    box-shadow: none !important;
+}
+
+#urlbar[breakout][breakout-extend] > #urlbar-background{
+    background-color: #28272F !important;
+    background-image: var(--lwt-additional-images)!important;
+    background-repeat: var(--lwt-background-tiling)!important;
+    background-position: var(--lwt-background-alignment)!important;
+}
+
+#urlbar[open] > .urlbarView > .urlbarView-body-outer > .urlbarView-body-inner {
+    border: none !important;
+}
+
+#nav-bar:not([tabs-hidden="true"]) {
+    box-shadow: none !important;
+}
