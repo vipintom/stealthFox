@@ -12,7 +12,7 @@ Firefox layout created with the aim of minimizing chrome area without modifying 
 5. Matches with stock Proton UI
 
 ## Demo
-![Demo](https://imgur.com/Iqe4kUN)
+![Demo](WYWjpZQfOJ.gif)
 
 ## Screenshots
 Closed Tabbar
