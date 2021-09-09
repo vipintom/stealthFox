@@ -1,17 +1,29 @@
 # stealthFox
 Clean and minimal set of changes to get Vertical Tabs in Firefox
 
+## Description
+Firefox layout created with the aim of minimizing chrome area without modifying the stock Proton UX. Another goal was to keep the chore css changes minimal to ensure things don't keep breaking down after updates. Inspired after using [FlyingFox](https://github.com/akshat46/FlyingFox). Currently only supported with dark mode.
+
+## Features
+1. Auto Hiding TST Sidebar
+2. Compact TST Tree Layout
+3. Compact Navbar
+4. Auto Hiding Page Controls in Urlbar
+5. Matches with stock Proton UI
+
+## Demo
+![Demo](https://imgur.com/Iqe4kUN)
+
 ## Screenshots
 Closed Tabbar
-![Closed Tabbar](https://user-images.githubusercontent.com/11923260/128328741-bb915026-8e4f-4539-9f23-0c301c77add6.png)
+![Closed Tabbar](https://i.imgur.com/gFfgmcR.png)
 Open Tabbar
-![Open Tabbar](https://user-images.githubusercontent.com/11923260/128329008-84390ed3-7d73-4a19-900b-555d5f97d5f9.png)
-
-## Description
-Firefox layout created with the aim of minimizing chrome area without modifying the stock Proton UX. Another goal was to keep the chore css changes minimal to ensure things don't keep breaking down after updates. Inspired after using [FlyingFox](https://github.com/akshat46/FlyingFox)
+![Open Tabbar](https://i.imgur.com/BYw4Gg2.png)
+Show Page Control on Hover
+![Show Page Control on Hover](https://i.imgur.com/qxXSZyt.png)
 
 ## Requirements
-1. Firefox v90+ (tested on v91.0.9 beta)
+1. Firefox v92+ (tested on v93.0.2 beta with dark mode and compact layout enabled on Win10)
 2. Tree Style Tabs extension
 
 ## How to use
