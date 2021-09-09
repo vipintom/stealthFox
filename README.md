@@ -9,7 +9,8 @@ Firefox layout created with the aim of minimizing chrome area without modifying 
 2. Compact TST Tree Layout
 3. Compact Navbar
 4. Auto Hiding Page Controls in Urlbar
-5. Matches with stock Proton UI
+5. Floating Find UI
+6. Matches with stock Proton UI
 
 ## Demo
 ![Demo](WYWjpZQfOJ.gif)
@@ -21,6 +22,8 @@ Open Tabbar
 ![Open Tabbar](https://i.imgur.com/BYw4Gg2.png)
 Show Page Control on Hover
 ![Show Page Control on Hover](https://i.imgur.com/qxXSZyt.png)
+Floating Find UI
+![Floating Find UI](https://i.imgur.com/JjlEHFu.png)
 
 ## Requirements
 1. Firefox v92+ (tested on v93.0.2 beta with dark mode and compact layout enabled on Win10)
