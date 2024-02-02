@@ -1,0 +1,140 @@
+:root {
+  --wide-tab-width: 300px;
+  --thin-tab-width: 35px;
+  --sidebar-background: #2b2a33;
+}
+
+#sidebar-box>#browser,
+#webextpanels-window {
+  background: var(--sidebar-background) !important;
+
+}
+
+/*Collapse in default state and add transition*/
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
+  border-right: none !important;
+  z-index: 2;
+  border-right: none !important;
+  width: 100% !important;
+  background: var(--sidebar-background);
+
+  /* lock sidebar to height by doing the inverse margin of the toolbar element */
+  z-index: 1000 !important;
+  position: relative !important;
+  margin-top: 0px !important;
+  border-right: none;
+  transition: all 200ms !important;
+
+  /* lock sidebar to specified width */
+  ;
+  min-width: var(--thin-tab-width) !important;
+  max-width: var(--thin-tab-width) !important;
+  overflow: hidden !important;
+  transition-property: width;
+  transition-duration: 0.3s;
+  transition-delay: 0.3s;
+  transition-timing-function: ease-in;
+}
+
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]::after {
+  background: var(--sidebar-background) !important;
+  margin-left: 207px;
+  z-index: 9999999;
+  position: absolute;
+  content: " ";
+  width: 1px;
+  height: 100%;
+  top: 0;
+  right: 0px;
+}
+
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover:after {
+  top: 42px;
+}
+
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover,
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar:hover {
+  min-width: var(--wide-tab-width) !important;
+  max-width: var(--wide-tab-width) !important;
+  margin-right: calc((var(--wide-tab-width) - var(--thin-tab-width)) * -1) !important;
+  transition: all 200ms !important;
+}
+
+#sidebar-header {
+  border: none !important;
+  border-right: 1px solid var(--sidebar-border-color);
+  background: var(--sidebar-background) !important;
+}
+
+#sidebar-close,
+#sidebar-title,
+#sidebar-switcher-arrow {
+  display: none;
+  border: none;
+}
+
+#sidebar-switcher-target {
+  border: none !important;
+  margin-left: 4.5px !important;
+  padding-top: 4px !important;
+  padding-bottom: 6px !important;
+}
+
+#sidebar-switcher-target:focus-visible:not(:hover, [open]),
+#sidebar-close:focus-visible:not(:hover, [open]) {
+  outline: none !important;
+}
+
+.sidebar-splitter {
+  opacity: 0 !important;
+  width: 0px !important;
+  border: none !important;
+  --avatar-image-url: none !important;
+}
+
+#sidebarMenu-popup .subviewbutton {
+  min-width: 0px;
+  padding: 0;
+  margin: 0 !important;
+}
+
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]+#sidebar-splitter {
+  display: none !important;
+}
+
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar-header {
+  visibility: collapse;
+}
+
+/* Auto Hide Tree Style Tab
+
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]+#sidebar-splitter {
+  display: none !important;
+}
+
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
+  visibility: collapse;
+}
+
+sidebar-box:not([sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]) {
+  min-width: var(--wide-tab-width) !important;
+  max-width: none !important;
+}
+
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] {
+  overflow: hidden !important;
+  position: relative !important;
+  transition: all 200ms !important;
+  min-width: var(--thin-tab-width) !important;
+  max-width: var(--thin-tab-width) !important;
+  z-index: 1;
+}
+
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:hover,
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar {
+  transition: all 200ms !important;
+  min-width: var(--wide-tab-width) !important;
+  max-width: var(--wide-tab-width) !important;
+  margin-right: calc((var(--wide-tab-width) - var(--thin-tab-width)) * -1) !important;
+  z-index: 1;
+}*/

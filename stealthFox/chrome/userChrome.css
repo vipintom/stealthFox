@@ -1,109 +1,117 @@
+@import url("sidebar.css");
+
+:root {
+  --toolbar-field-focus-border-color: transparent !important;
+  --urlbar-background-color: #201929;
+
+}
+
+:root[privatebrowsingmode="temporary"] {
+  --urlbar-background-color: #25003E;
+}
+
+
+/* Clean Urlbar */
+
+#urlbar,
+#searchbar {
+  font-size: 13px !important;
+  margin-top: 1px !important;
+}
+
+#urlbar-background,
+#searchbar {
+  border: none !important;
+  background-color: var(--urlbar-background-color) !important;
+  animation-name: none !important;
+  box-shadow: none !important;
+}
+
+#urlbar[breakout][breakout-extend]>#urlbar-background {
+  background-color: var(--urlbar-background-color) !important;
+  background-image: var(--lwt-additional-images) !important;
+  background-repeat: var(--lwt-background-tiling) !important;
+  background-position: var(--lwt-background-alignment) !important;
+}
+
+#urlbar[open]>.urlbarView>.urlbarView-body-outer>.urlbarView-body-inner {
+  border: none !important;
+}
+
+.urlbarView-row[selected]>.urlbarView-row-inner,
+.urlbarView-row-inner[selected] {
+  background: #3A3941 !important;
+}
+
+#nav-bar:not([tabs-hidden="true"]) {
+  box-shadow: none !important;
+}
+
+#navigator-toolbox {
+  border-bottom: none !important;
+}
+
+
+toolbar .toolbarbutton-1:not([disabled="true"], [checked], [open], :active)>.toolbarbutton-icon {
+  transition: background linear 0.5s;
+}
+
 /* Hiding Tabs Toolbar */
 
-#main-window[tabsintitlebar="true"]:not([extradragspace="true"]) #TabsToolbar > .toolbar-items {
+#main-window[tabsintitlebar="true"]:not([extradragspace="true"]) #TabsToolbar>.toolbar-items {
   opacity: 0;
   pointer-events: none;
 }
+
 #main-window:not([tabsintitlebar="true"]) #TabsToolbar {
-    visibility: collapse !important;
-}
-#main-window[tabsintitlebar="true"]:not([extradragspace="true"]) #TabsToolbar .titlebar-spacer {
-        border-inline-end: none;
+  visibility: collapse !important;
 }
 
-/* Hiding Tabs Toolbar Finished */
+#main-window[tabsintitlebar="true"]:not([extradragspace="true"]) #TabsToolbar .titlebar-spacer {
+  border-inline-end: none;
+}
 
 /* Moving Windows Control */
 
-/* Adding empty space for buttons */
 #nav-bar {
-	margin-right:137px;
-	margin-left:-3px;
+  margin-left: 0px !important;
+  border-top: 0px !important;
+  margin-top: 0px;
+  padding-left: 65px !important
 }
 
-/* 15px for dragging whole window by mouse*/
 #titlebar {
-	appearance: none !important;
-	height: 0px;
+  appearance: none !important;
+  height: 0px;
 }
 
-/* Fix for main menu calling by Alt button */
-#titlebar > #toolbar-menubar {
-	margin-top: 7px;
+
+#TabsToolbar>.titlebar-buttonbox-container {
+  display: block;
+  position: absolute;
+  top: 14px;
 }
 
-/* Move minimize/restore/close buttons to empty space */
-#TabsToolbar > .titlebar-buttonbox-container {
-	display: block;
-	position: absolute;
-	top: 10px;
-	right: 1px;
+#TabsToolbar {
+  background: #2B2A34 !important;
+  background-color: #2B2A34 ! important;
+  color: #2B2A34 !important;
 }
-
-.titlebar-button {
-  background-color: #2B2A33;
-  margin-top : -3px !important;
-  padding-top : 12px !important;
-  padding-bottom : 12px !important;
-}
-
-/* Moving Windows Control Finish */
-
-/* Auto Hide Tree Style Tab  */
-
-/* Hide splitter, when using Tree Style Tab. */
-#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] + #sidebar-splitter {
-  display: none !important;
-}
-/* Hide sidebar header, when using Tree Style Tab. */
-#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
-  visibility: collapse;
-}
-
-/* Shrink sidebar until hovered, when using Tree Style Tab. */
-#sidebar-box:not([sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]) {
-  min-width: var(--wide-tab-width) !important;
-  max-width: none !important;
-}
-#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] {
-  overflow: hidden !important;
-  position: relative !important;
-  transition: all 200ms !important;
-  min-width: var(--thin-tab-width) !important;
-  max-width: var(--thin-tab-width) !important;
-  z-index: 1;
-}
-#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:hover,
-#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar {
-  transition: all 200ms !important;
-  min-width: var(--wide-tab-width) !important;
-  max-width: var(--wide-tab-width) !important;
-  margin-right: calc((var(--wide-tab-width) - var(--thin-tab-width)) * -1) !important;
-  z-index: 1;
-}
-
-:root { --thin-tab-width: 35px; }
-:root { --wide-tab-width: 300px; }
-
-/* Auto Hide Tree Style Tab Finished */
 
 /* Page Actions Hide and Show on Hover */
 
-/* Hide Buttons and Reveal on Hover */
-
 #page-action-buttons:not(:hover) .urlbar-page-action,
-#page-action-buttons:not(:hover) #star-button
-{
+#page-action-buttons:not(:hover) #star-button {
   width: 0px !important;
   min-width: 0px !important;
   padding-left: 0px !important;
   padding-right: 10px !important;
-  margin-right: -5px !important;
+  margin-right: -15px !important;
   transition: all 250ms ease-in-out;
 }
-#page-action-buttons:not(:hover) #userContext-indicator 
-{ 
-  margin-right : 37px !important;
+
+#page-action-buttons:not(:hover) #userContext-indicator {
+  margin-right: 37px !important;
   transition: all 250ms ease-in-out;
 }
 
@@ -112,104 +120,60 @@
   visibility: visible;
   min-width: unset !important;
 }
-#page-action-buttons:hover #userContext-indicator
-{ 
-  margin-right : 0px !important;
+
+#page-action-buttons:hover #userContext-indicator {
+  margin-right: 0px !important;
 }
 
-/* Create page actions hover "button" */
-#page-action-buttons::after 
-{
+#page-action-buttons::after {
   content: "•••";
   position: absolute;
-  top: 0.7em;
+  margin-top: 0px;
   font-size: 0.7em;
   opacity: 0.5;
-  right: 8px;
+  right: 6px;
   transition: all 50ms ease-in-out;
 }
 
 
-/* Hide the button on hover */
-#page-action-buttons:hover::after 
-{
+
+#page-action-buttons:hover::after {
   display: none !important;
   width: 0px !important;
   margin-left: 0px !important;
   transition: all 50ms ease-in-out;
 }
 
-/* Hide Buttons and Reveal on Hover Finished*/
 
-#urlbar,#searchbar 
-{
-    font-size: 13px !important;
-	margin-top: 1px !important;
+
+/* Move findbar to top right */
+.browserContainer>findbar {
+  position: absolute;
+  top: -1px;
+  right: 0px;
+  contain: content;
+  border-radius: 0 0 var(--toolbarbutton-border-radius) var(--toolbarbutton-border-radius);
 }
 
-* { scrollbar-width: thin !important; }
-
-findbar{
-  -moz-box-ordinal-group: 0;
-  margin-bottom: -33px;
-  position: relative;
-  border-top: none !important;
-  padding: 0 !important;
-  transition: transform 82ms linear, opacity 82ms linear 32ms !important;
-  background: none !important;
-  pointer-events: none;
-  z-index: 1;
+/* Hide status */
+findbar .findbar-find-status {
+  display: none;
 }
 
-.findbar-container > .findbar-find-fast{
-  padding: var(--toolbarbutton-inner-padding) 1px;
-  margin: 0 !important;
+/* Replace checkboxes with buttons */
+findbar .checkbox-check {
+  display: none !important;
 }
 
-findbar[hidden]{ transform: translateY(-30px);}
-
-findbar > .findbar-container,
-findbar > .close-icon{
-  border: 1px solid var(--chrome-content-separator-color);
-  border-width: 0 0 1px 0px;
-  background: var(--uc-light-bkgnd-color,var(--toolbar-bgcolor)) !important;
-  pointer-events: auto;
-}
-findbar > .findbar-container{
-  -moz-box-direction: reverse;
-  border-left-width: 1px;
-  border-bottom-left-radius: 4px;
+findbar checkbox {
+  border: 1px solid var(--input-border-color);
+  border-radius: var(--toolbarbutton-border-radius);
+  padding: 2px 4px;
+  margin: -2px 4px !important;
+  transition: 0.1s ease-in-out;
 }
 
-.findbar-closebutton{ margin: 0 !important; border-radius: 0 !important; padding: 5px !important; }
-.findbar-closebutton > image{ padding: 3px }
-.findbar-closebutton:hover > image{ background: var(--toolbarbutton-hover-background) !important; border-radius: 4px }
-findbar > .findbar-container > hbox{ margin: 0 5px }
-
-findbar::before{
-  content:"";
-  display: -moz-box;
-  -moz-box-flex: 100;
-}
-
-#urlbar-background, #searchbar {
-    border: none !important;
-    background-color: #28272F !important;
-    animation-name: none !important;
-    box-shadow: none !important;
-}
-
-#urlbar[breakout][breakout-extend] > #urlbar-background{
-    background-color: #28272F !important;
-    background-image: var(--lwt-additional-images)!important;
-    background-repeat: var(--lwt-background-tiling)!important;
-    background-position: var(--lwt-background-alignment)!important;
-}
-
-#urlbar[open] > .urlbarView > .urlbarView-body-outer > .urlbarView-body-inner {
-    border: none !important;
-}
-
-#nav-bar:not([tabs-hidden="true"]) {
-    box-shadow: none !important;
+findbar checkbox[checked="true"] {
+  background: var(--button-active-bgcolor);
+  transition: 0.1s ease-in-out;
 }

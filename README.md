@@ -1,37 +1,39 @@
 # stealthFox
-Clean and minimal set of changes to get Vertical Tabs in Firefox
+Clean and minimal set of changes to get Vertical Tabs and a minimal UI for daily driving Firefox.
 
 ## Description
-Firefox layout created with the aim of minimizing chrome area without modifying the stock Proton UX. Another goal was to keep the chore css changes minimal to ensure things don't keep breaking down after updates. Inspired after using [FlyingFox](https://github.com/akshat46/FlyingFox). Currently only supported with dark mode.
+Firefox layout created with the 2 aims
+
+    1. Minimizing chrome area without modifying the stock Proton UX.
+    2. Keep the core css changes minimal to ensure UI doesn't break after updates.
+
+I've been daily driving this layout for more than 3 years starting from v1 build for Windows over to macOS now.
+Initialy the theme was designed to be used with Tree Style Tabs (till v2). Since then though I have moved over to Sidebery so updating the theme to reflect the same.
+
+Tested on **macOS** Sonoma using dark mode with **FFv122.0**.
 
 ## Features
-1. Auto Hiding TST Sidebar
-2. Compact TST Tree Layout
-3. Compact Navbar
-4. Auto Hiding Page Controls in Urlbar
-5. Floating Find UI
-6. Matches with stock Proton UI
+1. Edge-like vertical tab design
+2. Compact Sidebery Tree Layout with smooth transitions
+3. Auto Hiding Sidebery Sidebar
+4. Dynamic Indentation
+5. Support for Tab Containers with visual identification
+6. Pinned tabs
+7. Compact Navbar
+8. Auto Hiding Page Controls in Urlbar
+9. Floating Find UI
+10. Matches with stock Proton UI
 
 ## Demo
-![Demo](WYWjpZQfOJ.gif)
-
-## Screenshots
-Closed Tabbar
-![Closed Tabbar](https://i.imgur.com/gFfgmcR.png)
-Open Tabbar
-![Open Tabbar](https://i.imgur.com/BYw4Gg2.png)
-Show Page Control on Hover
-![Show Page Control on Hover](https://i.imgur.com/qxXSZyt.png)
-Floating Find UI
-![Floating Find UI](https://i.imgur.com/JjlEHFu.png)
+![Demo](demo.gif)
 
 ## Requirements
-1. Firefox v92+ (tested on v93.0.2 beta with dark mode and compact layout enabled on Win10)
-2. Tree Style Tabs extension
+1. Firefox v122+
+2. Sidebery extension
 
 ## How to use
-1. Copy/Clone this repo
+1. Download/Clone this repo
 2. Open about:profiles
 3. Open root location for your deault profile
 4. Copy chrome folder from the downloaded repo and paste it in the profile root location.
-5. Import tst_config.json from Tree Style Tabs settings.
+5. Import sidebery-data.json from Sidebery Settings > Help > Import addon data
