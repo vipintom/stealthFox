@@ -25,7 +25,7 @@ Tested on **macOS** Sonoma using dark mode with **FFv122.0**.
 10. Matches with stock Proton UI
 
 ## Demo
-![Demo](demo.gif)
+![Demo](https://github.com/vipintom/stealthFox/blob/master/demo.gif)
 
 ## Requirements
 1. Firefox v122+
@@ -33,7 +33,8 @@ Tested on **macOS** Sonoma using dark mode with **FFv122.0**.
 
 ## How to use
 1. Download/Clone this repo
-2. Open about:profiles
-3. Open root location for your deault profile
-4. Copy chrome folder from the downloaded repo and paste it in the profile root location.
-5. Import sidebery-data.json from Sidebery Settings > Help > Import addon data
+2. Open _about:config_. Search _toolkit.legacyUserProfileCustomizations.stylesheets_ and set it to _true_
+3. Open _about:profiles_
+4. Open root location for your deault profile
+5. Copy _chrome_ folder from the downloaded repo and paste it in the profile root location.
+6. Import _sidebery-data.json_ from Sidebery Settings > Help > Import addon data
