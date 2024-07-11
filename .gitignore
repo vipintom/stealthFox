@@ -1,0 +1,6 @@
+*.bak
+*.gho
+*.ori
+*.orig
+*.tmp
+/*.DS_Store
